@@ -54,14 +54,14 @@ const WebsiteChecker = () => {
             placeholder="Enter a website URL"
             className="border p-2 m-2"
           />
-          <label htmlFor="deviceWidth">Device Width:</label>
+          {/* <label htmlFor="deviceWidth">Device Width:</label>
           <input
             id="deviceWidth"
             type="number"
             value={deviceWidth}
             onChange={(e) => handleWidthChange(Number(e.target.value))}
             className="border p-2 m-2"
-          />
+          /> */}
           <button
             type="submit"
             className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700"
@@ -70,13 +70,50 @@ const WebsiteChecker = () => {
           </button>
         </form>
 
-        <div className="p-10 m-10">
+        <div className="p-10 m-10 flex flex-col items-center">
+          {/* mobile portrtait */}
           {iframeUrl && (
             <div className="mt-8">
               <iframe
                 src={iframeUrl}
                 title="Responsive Website Checker"
-                style={{ width: "420px", height: "400px" }}
+                style={{ width: "375px", height: "685px" }}
+              ></iframe>
+            </div>
+          )}
+
+          {/* mobile landscape */}
+
+          {iframeUrl && (
+            <div className="mt-8">
+              <iframe
+                src={iframeUrl}
+                title="Responsive Website Checker"
+                style={{ width: "734px", height: "375px" }}
+              ></iframe>
+            </div>
+          )}
+
+          {/* big mobile portraite */}
+
+          {iframeUrl && (
+            <div className="mt-8">
+              <iframe
+                src={iframeUrl}
+                title="Responsive Website Checker"
+                style={{ width: "412px", height: "660px" }}
+              ></iframe>
+            </div>
+          )}
+
+          {/* big mobile landscape */}
+
+          {iframeUrl && (
+            <div className="mt-8">
+              <iframe
+                src={iframeUrl}
+                title="Responsive Website Checker"
+                style={{ width: "684px", height: "390px" }}
               ></iframe>
             </div>
           )}
@@ -86,7 +123,7 @@ const WebsiteChecker = () => {
               <iframe
                 src={iframeUrl}
                 title="Responsive Website Checker"
-                style={{ width: "1020px", height: "600px" }}
+                style={{ width: "770px", height: "930px" }}
               ></iframe>
             </div>
           )}
@@ -96,30 +133,10 @@ const WebsiteChecker = () => {
               <iframe
                 src={iframeUrl}
                 title="Responsive Website Checker"
-                style={{ width: "420px", height: "400px" }}
+                style={{ width: "1024px", height: "675px" }}
               ></iframe>
             </div>
           )}
-
-          {iframeUrl && (
-            <div className="mt-8">
-              <iframe
-                src={iframeUrl}
-                title="Responsive Website Checker"
-                style={{ width: "1020px", height: "600px" }}
-              ></iframe>
-            </div>
-          )}
-
-          <main className="flex-1 p-4">
-            <div className="bg-white rounded-lg shadow p-4">
-              <iframe
-                src={iframeUrl}
-                title="Responsive Website Checker"
-                style={{  height: "600px" }}
-              ></iframe>
-            </div>
-          </main>
         </div>
       </div>
     </div>
